@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Running on Windows</h1>
+    <% if(process.env.Machine === 'development'){
+        %>
+    <h1>Running on Development</h1>
+        <%
+    }else if (process.env.Machine === 'production') {
+        %>
+    <h1>Running on Production</h1>
+        <%
+    } %>
 </body>
 </html>
