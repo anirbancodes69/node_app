@@ -1,3 +1,5 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: "./config.env" });
 const express = require("express");
 const app = express();
 
@@ -9,4 +11,5 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => {
   console.log("Node app listening on Port: 3000");
+  console.log(process.env.MACHINE);
 });
